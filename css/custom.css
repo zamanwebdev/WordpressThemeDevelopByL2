@@ -5,6 +5,9 @@
   --pink:#ea1a70;
   --blog:#fff;
   --footertop:#292929;
+  --footermain:#292929;
+  --btextcolor:black;
+  --headerBackground:white;
 }
 
 body {
@@ -12,6 +15,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     line-height: 1.5em;
+    color: var(--btextcolor);
   }
 
 p {
@@ -74,6 +78,7 @@ input[type="submit"].submit:hover {
   #header_area {
     padding: 0px 0 15px;
     box-shadow: 0 3px 10px #ddd;
+    background: var(--headerBackground);
   }
   
   #header_area .col-md-9 ul {
@@ -418,7 +423,7 @@ input[type="submit"].submit:hover {
   Copyright Area Styling
 ===========================================*/
 #copyright_area {
-  background: #292929;
+  background: var(--footermain);
   padding: 20px 0;
   color: #fff;
   text-align: center;
