@@ -21,3 +21,5 @@ include_once('inc/menu_register.php');
 // Widgets Register
 include_once('inc/widgets_register.php');
 
+// Shortcode Register
+include_once('inc/shortcode.php');
