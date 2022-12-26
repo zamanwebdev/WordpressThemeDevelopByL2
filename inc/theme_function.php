@@ -76,7 +76,7 @@ function zaman_customizar_register($wp_customize){
       )));
       //Header Background Color
       $wp_customize ->add_setting('header_background', array(
-        'default' => 'white',
+        'default' => '#fff',
       ));
       $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'header_background', array(
         'label' => 'Header Background Color',
