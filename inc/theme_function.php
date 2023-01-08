@@ -1,6 +1,15 @@
 <?php 
 
 function zaman_customizar_register($wp_customize){
+    //Notice  Background Color
+      $wp_customize ->add_setting('notice_background_color', array(
+        'default' => '#112442',
+      ));
+      $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'notice_background_color', array(
+        'label' => 'Notice Background Color',
+        'section' => 'zaman_colors',
+        'settings' => 'notice_background_color',
+      )));
     //Header Area Function
     $wp_customize->add_section('zaman_header_area', array(
         'title' =>__('Header Area', 'syedzaman'),
@@ -129,6 +138,8 @@ function zaman_customizar_register($wp_customize){
         'settings' => 'body_text_color',
       )));
       
+      
+      
 
 }
 add_action('customize_register', 'zaman_customizar_register');
@@ -136,6 +147,7 @@ add_action('customize_register', 'zaman_customizar_register');
 function ali_theme_color_cus(){
   ?>
   <style>
+    :root{ --notice_background_color:<?php echo get_theme_mod('notice_background_color'); ?>}
     body{background: <?php echo get_theme_mod('zaman_bg_color'); ?>}
     :root{ --btextcolor:<?php echo get_theme_mod('body_text_color'); ?>}
     :root{ --headerBackground:<?php echo get_theme_mod('header_background'); ?>}
@@ -143,6 +155,7 @@ function ali_theme_color_cus(){
     :root{ --blog:<?php echo get_theme_mod('zaman_blog_color'); ?>}
     :root{ --footertop:<?php echo get_theme_mod('footer_top_background'); ?>}
     :root{ --footermain:<?php echo get_theme_mod('footer_main_background'); ?>}
+    
   </style>
   <?php 
 }
